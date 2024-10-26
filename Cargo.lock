@@ -3,5 +3,23 @@
 version = 3
 
 [[package]]
-name = "getdata"
+name = "libc"
+version = "0.2.161"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8e9489c2807c139ffd9c1794f4af0ebe86a828db53ecdc7fea2111d0fed085d1"
+
+[[package]]
+name = "rustygetdata"
 version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9b9ea3ad9d0544fb30483ad11b3bcdd87a49bccfd49ce45efd9fce109421e06b"
+dependencies = [
+ "libc",
+]
+
+[[package]]
+name = "test_getdata_library"
+version = "0.1.0"
+dependencies = [
+ "rustygetdata",
+]
